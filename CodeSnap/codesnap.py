@@ -10,15 +10,14 @@ class CodeSnap:
   
   def loadmodel(self):
     
-    tokenizer = AutoTokenizer.from_pretrained("usvsnsp/code-vs-nl")
-    model = AutoModelForSequenceClassification.from_pretrained("usvsnsp/code-vs-nl")
+    tokenizer = AutoTokenizer.from_pretrained("vishnun/codenlbert-sm")
+    model = AutoModelForSequenceClassification.from_pretrained("vishnun/codenlbert-sm")
 
     return tokenizer, model
 
   def retrievecode(self):
 
     ocr_list = [x for x in pytesseract.image_to_string(self.image_path).split("\n") if x != '']
-    
     tokenizer, model = self.loadmodel()
 
     ## Retrieve Code Blocks
@@ -30,9 +29,8 @@ class CodeSnap:
 
       predicted_class_id = logits.argmax().item()
 
-      if model.config.id2label[predicted_class_id] == "Code":
+      if model.config.id2label[predicted_class_id].upper() == "CODE":
         text_list.append(text)
-      
     
     return ('\n').join(text_list)
 
