@@ -10,20 +10,20 @@ requirements = [
 
 
 setuptools.setup(
-    name="codesnap",
+    name="snapcode",
     version="0.0.1",
     author="Vishnu Nandakumar",
     author_email="nkumarvishnu25@gmail.com",
     description="Extract code blocks from screenshots and images",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url = 'https://github.com/Vishnunkumar/CodeSnap/',
+    url = 'https://github.com/Vishnunkumar/snapcode/',
     packages=[
-        'codesnap',
+        'snapcode',
     ],
-    package_dir={'codesnap': 'CodeSnap'},
+    package_dir={'snapcode': 'snapcode'},
     package_data={
-        'clipcrop': ['CodeSnap/*.py']
+        'snapcode': ['snapcode/*.py']
     },
     install_requires=requirements,
     license="MIT license",
@@ -34,7 +34,7 @@ setuptools.setup(
     'Intended Audience :: Developers',      # Define that your audience are developers
     'Topic :: Software Development :: Build Tools',
     'License :: OSI Approved :: MIT License',   # Again, pick a license
-    'Programming Language :: Python :: 3',      #Specify which pyhton versions that you want to support
+    'Programming Language :: Python :: 3',      #Specify which python versions that you want to support
     'Programming Language :: Python :: 3.4',
     'Programming Language :: Python :: 3.5',
     'Programming Language :: Python :: 3.6',
