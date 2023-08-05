@@ -11,7 +11,7 @@ requirements = [
 
 setuptools.setup(
     name="snapcode",
-    version="0.0.2",
+    version="0.0.3",
     author="Vishnu Nandakumar",
     author_email="nkumarvishnu25@gmail.com",
     description="Extract code blocks from screenshots and images",
