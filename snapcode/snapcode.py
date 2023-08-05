@@ -9,9 +9,10 @@ class CodeSnap:
     self.image_path = image_path
   
   def loadmodel(self):
-    
-    tokenizer = AutoTokenizer.from_pretrained("vishnun/codenlbert-sm")
-    model = AutoModelForSequenceClassification.from_pretrained("vishnun/codenlbert-sm")
+
+    model_id = "vishnun/codenlbert-tiny"
+    tokenizer = AutoTokenizer.from_pretrained(model_id)
+    model = AutoModelForSequenceClassification.from_pretrained(model_id)
 
     return tokenizer, model
 
